@@ -2,10 +2,10 @@
 public class Collatz {
 	public static void main(String args[]) {
 		int n = Integer.parseInt(args [0]);
-		int count = 1;
 		System.out.print("1 4 2 1 (4)");
 		System.out.println();
 		for (int i = 2; i <= n; i++) {
+			int count = 1;
 			int coll = i;
 			System.out.print(coll+ " ");
 			while (coll != 1) {
