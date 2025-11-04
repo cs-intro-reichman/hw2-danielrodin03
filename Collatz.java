@@ -2,13 +2,11 @@
 public class Collatz {
 	public static void main(String args[]) {
 		int n = Integer.parseInt(args [0]);
-		System.out.print("1 4 2 1 (4)");
-		System.out.println();
-		for (int i = 2; i <= n; i++) {
+		for (int i = 1; i <= n; i++) {
 			int count = 1;
 			int coll = i;
 			System.out.print(coll+ " ");
-			while (coll != 1) {
+			do {
 				if (coll % 2 == 0) {
 					coll /= 2;
 				} else {
@@ -16,7 +14,7 @@ public class Collatz {
 				}
 				System.out.print(coll+ " ");
 				count++;
-			}
+			} while (coll != 1);
 			System.out.print("(" +count+ ")");
 			System.out.println();
 		}
